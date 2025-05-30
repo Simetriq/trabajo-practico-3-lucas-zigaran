@@ -1,0 +1,10 @@
+#personajes{
+    display: flex;
+    align-items: center;
+    background-image: url('../koku.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    max-height: fit-content;
+}
+

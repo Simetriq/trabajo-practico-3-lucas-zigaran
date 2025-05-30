@@ -37,12 +37,12 @@ forma.addEventListener ('submit', async(event)=> {
      data.forEach((character)=> {
             personaje.innerHTML=`
                 <div class="col-3 pb-2 d-flex justify-content-center" data-id=${character.id}>
-            <div class="card">
+            <div class="card p-2 mx-2 my-2" style="width: 500px;">
               <img
-                class="card-img-top"
+                class="card-img-top style= width: 100%; height: 400px; object-fit: contain;"
                 src=${character.image}
               />
-              <div class="card-body">
+              <div class="card-body bg-dark bg-opacity-75">
                 <h5 class="card-title">${character.name}</h5>
                 <p class="card-text">${character.race} - ${character.gender}</p>
                 <button class="btn btn-success btn-ver-detalles">Ver más</button>
