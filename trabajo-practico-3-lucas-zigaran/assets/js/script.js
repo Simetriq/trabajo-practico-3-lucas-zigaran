@@ -1,7 +1,7 @@
 const boton = document.getElementById('traerApi');
 const personaje = document.getElementById('personajes');
-
 const forma = document.getElementById('formbuscador');
+
 boton.addEventListener('click', async() => {
      await fetch ("https://dragonball-api.com/api/characters").then
     ((response) => { 
