@@ -8,6 +8,7 @@ boton.addEventListener('click', async() => {
         return response.json()
     }).then((datos) => {
         console.log(datos)
+        personaje.innerHTML=""
         datos.items.forEach((character)=> {
             personaje.innerHTML+=`
                 <div class="col-3 pb-2 d-flex justify-content-center" data-id=${character.id}>
@@ -30,12 +31,9 @@ boton.addEventListener('click', async() => {
 forma.addEventListener ('submit', async(event)=> {
     event.preventDefault()
     const buscador = document.getElementById('buscador').value;
-    const response = await fetch (`https://dragonball-api.com/api/characters?name=${buscador}`)
+    try {
+          const response = await fetch (`https://dragonball-api.com/api/characters?name=${buscador}`)
     const data = await response.json()
-    console.log("buscador")
-    console.log(buscador)
-    console.log("data")
-    console.log(data)
      data.forEach((character)=> {
             personaje.innerHTML=`
                 <div class="col-3 pb-2 d-flex justify-content-center" data-id=${character.id}>
@@ -52,4 +50,7 @@ forma.addEventListener ('submit', async(event)=> {
             </div>
           </div>`
         });
+    } catch (error) {
+      alert("Ocurrió un error al consultar la API.")
+    }
 });
