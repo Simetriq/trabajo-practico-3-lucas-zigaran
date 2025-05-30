@@ -36,19 +36,15 @@ forma.addEventListener ('submit', async(event)=> {
     const data = await response.json()
      data.forEach((character)=> {
             personaje.innerHTML=`
-                <div class="col-3 pb-2 d-flex justify-content-center" data-id=${character.id}>
-            <div class="card p-2 mx-2 my-2" style="width: 500px;">
-              <img
-                class="card-img-top style= width: 100%; height: 400px; object-fit: contain;"
-                src=${character.image}
-              />
-              <div class="card-body bg-dark bg-opacity-75">
-                <h5 class="card-title">${character.name}</h5>
-                <p class="card-text">${character.race} - ${character.gender}</p>
-                <button class="btn btn-success btn-ver-detalles">Ver más</button>
-              </div>
-            </div>
-          </div>`
+            <div class="col-3 pb-2 d-flex justify-content-center" data-id="${character.id}">
+                <div class="card bg-dark p-2 text-dark bg-opacity-10 mx-2 my-2" style="width: 500px; overflow: visible; position: relative; border: none;">
+                    <img class="card-img-top p-2 img-hover" alt="${character.name}" style="width: 100%; height: 400px; object-fit: contain;" src="${personaje.image}" />
+                    <div class="card card-body">
+                        <h5 class="card-title">${character.name}</h5>
+                        <p class="card-text">${character.race} - ${character.gender}</p>
+                    </div>
+                </div>
+            </div>`
         });
     } catch (error) {
       alert("Ocurrió un error al consultar la API.")

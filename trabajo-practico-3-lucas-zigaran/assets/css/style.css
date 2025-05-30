@@ -8,3 +8,8 @@
     max-height: fit-content;
 }
 
+.card-img-top{
+    height: 500px;
+    width: 500px;
+    object-fit: contain;
+}
