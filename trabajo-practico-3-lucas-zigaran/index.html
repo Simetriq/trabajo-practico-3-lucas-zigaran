@@ -11,41 +11,47 @@
       integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
       crossorigin="anonymous"
     />
-    <!--Link de los estlos de Bootstrap-->
     <title>Trabajo Practico N°3</title>
   </head>
   <body>
-    <header>
-      <nav id="madre" class="navbar bg-body-tertiary">
-        <div class="container">
-          <a class="navbar-brand" href="#">
-            <img src="assets/dragon-ball-z-kai-poster-i-assembled-using-an-alternate-v0-navpsxy8fmma1.png" alt="DragonBall" width="400" height="200"/>
-          </a>
-        </div>
-      </nav>
-    </header>
-    <div>
-      <div>
-        <button  id="traerApi" type="button" class="btn btn-outline-danger">Traer Datos</button>
-      </div>
-      <div>
+    <main>
+      <header>
         <nav class="navbar bg-body-tertiary">
-          <div class="container-fluid">
-            <form class="d-flex" role="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-                />
-              <button class="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
+          <div class="container">
+            <a class="navbar-brand" href="#">
+              <img
+                src="assets/dragon-ball-z-kai-poster-i-assembled-using-an-alternate-v0-navpsxy8fmma1.png"
+                alt="DragonBall"
+                width="400"
+                height="200"
+              />
+            </a>
           </div>
         </nav>
+      </header>
+      <div>
+        <div>
+          <button id="traerApi" type="button" class="btn btn-outline-danger">
+            Traer Datos
+          </button>
+        </div>
+        <div>
+          <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid">
+              <form id="formbuscador" class="d-flex" role="search">
+                <input id="buscador" class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                <button class="btn btn-outline-success" type="submit">
+                  Search
+                </button>
+              </form>
+            </div>
+          </nav>
+        </div>
       </div>
-    </div>
+      <div id="personajes">
+
+      </div>
+    </main>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
